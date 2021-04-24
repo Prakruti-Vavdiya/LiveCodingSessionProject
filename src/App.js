@@ -8,6 +8,7 @@ function App() {
   const like=()=>{
     if(!liked){
       setLikes(likes+1);
+      if(disliked)dislike();
     }
     else{
       setLikes(likes-1);
@@ -18,6 +19,7 @@ function App() {
   const dislike=()=>{
     if(!disliked){
       setDislikes(dislikes+1);
+      if(liked) like();
     }
     else{
       setDislikes(dislikes-1);
